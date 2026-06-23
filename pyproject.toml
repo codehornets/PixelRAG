@@ -1,6 +1,6 @@
 [project]
 name = "pixelrag"
-version = "0.2.1"
+version = "0.3.0"
 description = "Visual Retrieval-Augmented Generation — render, embed, index, search"
 requires-python = ">=3.12"
 authors = [{ name = "Zhifei Li", email = "andylizf@outlook.com" }]
@@ -44,7 +44,7 @@ serve = [
 ]
 index = ["pixelrag[embed]", "pyyaml>=6.0"]
 all = ["pixelrag[embed,serve,index]"]
-gpu = ["faiss-gpu-cu12>=1.13.2"]
+gpu = ["faiss-gpu-cu12>=1.13.2; sys_platform == 'linux'"]
 playwright = ["playwright>=1.40.0"]
 pdf = ["pdf2image>=1.16.0"]
 kiwix = ["libzim>=3.6.0"]
